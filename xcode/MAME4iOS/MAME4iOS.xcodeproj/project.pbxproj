@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A1A540E1D5FEA0F0053C761 /* libmamearmv7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1A540D1D5FEA0F0053C761 /* libmamearmv7.a */; };
+		0A68E45E1DB8BD7D000A284F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A68E45C1DB8BD7D000A284F /* libstdc++.6.0.9.tbd */; };
+		0A68E45F1DB8BD7D000A284F /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A68E45D1DB8BD7D000A284F /* libstdc++.6.tbd */; };
 		B370F8B01C8549010069377D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B370F8AF1C8549010069377D /* GameController.framework */; };
 		CE30090116FA47BD000EDCF1 /* cheat.zip in Resources */ = {isa = PBXBuildFile; fileRef = CE30090016FA47BD000EDCF1 /* cheat.zip */; };
 		CE30090216FA47BD000EDCF1 /* cheat.zip in Resources */ = {isa = PBXBuildFile; fileRef = CE30090016FA47BD000EDCF1 /* cheat.zip */; };
@@ -116,6 +118,8 @@
 
 /* Begin PBXFileReference section */
 		0A1A540D1D5FEA0F0053C761 /* libmamearmv7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmamearmv7.a; path = ../../libmamearmv7.a; sourceTree = "<group>"; };
+		0A68E45C1DB8BD7D000A284F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		0A68E45D1DB8BD7D000A284F /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		B370F8AF1C8549010069377D /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		CE30090016FA47BD000EDCF1 /* cheat.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = cheat.zip; path = "../../iOS-res/Applications/MAME4iOS.app/cheat.zip"; sourceTree = "<group>"; };
 		CE30090316FA47CB000EDCF1 /* Category.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Category.ini; path = "../../iOS-res/Applications/MAME4iOS.app/Category.ini"; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A68E45E1DB8BD7D000A284F /* libstdc++.6.0.9.tbd in Frameworks */,
+				0A68E45F1DB8BD7D000A284F /* libstdc++.6.tbd in Frameworks */,
 				B370F8B01C8549010069377D /* GameController.framework in Frameworks */,
 				CE8F1C601735199400D3F527 /* CoreBluetooth.framework in Frameworks */,
 				CEE680D2163BE5C400051BC2 /* CoreFoundation.framework in Frameworks */,
@@ -367,6 +373,8 @@
 		CEE680881635BA7000051BC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A68E45C1DB8BD7D000A284F /* libstdc++.6.0.9.tbd */,
+				0A68E45D1DB8BD7D000A284F /* libstdc++.6.tbd */,
 				B370F8AF1C8549010069377D /* GameController.framework */,
 				CEE680CD163B147100051BC2 /* libz.dylib */,
 				CEE680CB163B13E400051BC2 /* libstdc++.dylib */,
@@ -464,6 +472,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Seleuco;
+				TargetAttributes = {
+					CEE680841635BA7000051BC2 = {
+						DevelopmentTeam = AZBPJKY9ZT;
+					};
+				};
 			};
 			buildConfigurationList = CEE6807F1635BA6F00051BC2 /* Build configuration list for PBXProject "MAME4iOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -715,6 +728,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AZBPJKY9ZT;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
@@ -724,7 +738,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MAME4iOS/MAME4iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
@@ -732,7 +746,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lesbird.mame4ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darrenbranford.mame4ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -744,12 +758,13 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = AZBPJKY9ZT;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAME4iOS/MAME4iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "MAME4iOS/MAME4iOS-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
@@ -757,7 +772,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lesbird.mame4ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.darrenbranford.mame4ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

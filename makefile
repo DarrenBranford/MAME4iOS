@@ -344,7 +344,7 @@ BUILD_ZLIB = 1
 # specify a default optimization level if none explicitly stated
 ifndef OPTIMIZE
 ifndef SYMBOLS
-OPTIMIZE = 3
+OPTIMIZE = 0
 else
 OPTIMIZE = 0
 endif
